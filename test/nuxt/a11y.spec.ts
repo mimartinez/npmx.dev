@@ -187,6 +187,7 @@ import {
   PackageListControls,
   PackageListToolbar,
   PackageMaintainers,
+  PackageDownloadButton,
   PackageManagerSelect,
   PackageMetricsBadges,
   PackagePlaygrounds,
@@ -2980,6 +2981,23 @@ describe('component accessibility audits', () => {
         const results = await runAxe(component)
         expect(results.violations).toEqual([])
       }
+    })
+  })
+
+  describe('PackageDownloadButton', () => {
+    it('should have no accessibility violations', async () => {
+      const component = await mountSuspended(PackageDownloadButton, {
+        props: {
+          packageName: 'vue',
+          version: {
+            version: '3.5.0',
+            dist: { tarball: 'https://registry.npmjs.org/vue/-/vue-3.5.0.tgz' },
+          } as any,
+          dependencies: null,
+        },
+      })
+      const results = await runAxe(component)
+      expect(results.violations).toEqual([])
     })
   })
 

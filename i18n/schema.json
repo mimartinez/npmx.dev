@@ -1896,6 +1896,18 @@
             }
           },
           "additionalProperties": false
+        },
+        "download": {
+          "type": "object",
+          "properties": {
+            "button": {
+              "type": "string"
+            },
+            "tarball": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
         }
       },
       "additionalProperties": false

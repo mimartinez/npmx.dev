@@ -630,6 +630,10 @@
       "b": "{size} B",
       "kb": "{size} kB",
       "mb": "{size} MB"
+    },
+    "download": {
+      "button": "Download",
+      "tarball": "Download Tarball as .tar.gz"
     }
   },
   "connector": {
